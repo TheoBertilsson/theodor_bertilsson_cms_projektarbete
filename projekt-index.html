@@ -3,54 +3,59 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
     <title>Document</title>
   </head>
   <body>
     <header>
       <a href="/startsida.html">
-        <img src="./static/profil.png" alt="Profile picture" />
+        <img
+          src="./static/profil.png"
+          alt="Profile picture"
+          class="navPicture"
+        />
       </a>
       <nav>
-        <ul>
-          <li>
-            <a href="/projekt-startsida.html">Projects</a>
-          </li>
-          <li>
-            <a href="/about.html">About me</a>
-          </li>
-          <li>
-            <a href="/kontakt-startsida.html">Contact</a>
-          </li>
-        </ul>
+        <a href="/projekt-startsida.html">Projects</a>
+        <a href="/about.html">About me</a>
+
+        <a href="/kontakt-startsida.html">Contact</a>
       </nav>
     </header>
-    <main>
-      <section>
+    <main class="projectIndexMain">
+      <section class="projectIndexSection">
         <img src="./static/budget.png" alt="Budgeting app" />
-        <h3>Budgeting App</h3>
-        <p>
-          This is a budgeting app that I created using Svelte 5. The app allows
-          you to add your income and expenses and it will calculate your total
-          balance. You can also view your transactions and filter them by date.
-        </p>
+        <div>
+          <h3>Budgeting App</h3>
+          <p>
+            This is a budgeting app that I created using Svelte 5. The app
+            allows you to add your income and expenses and it will calculate
+            your total balance. You can also view your transactions and filter
+            them by date.
+          </p>
+        </div>
       </section>
-      <section>
+      <section class="projectIndexSection">
         <img src="./static/todo.png" alt="Todo app" />
-        <h3>To-do list</h3>
-        <p>
-          This is a to-do list app that I created using React. The app allows
-          you to add tasks to a list and mark them as completed. You can also
-          filter the tasks by their status.
-        </p>
+        <div>
+          <h3>To-do list</h3>
+          <p>
+            This is a to-do list app that I created using React. The app allows
+            you to add tasks to a list and mark them as completed. You can also
+            filter the tasks by their status.
+          </p>
+        </div>
       </section>
-      <section>
+      <section class="projectIndexSection">
         <img src="./static/ecommerce.png" alt="Ecommerce Page" />
-        <h3>Ecommerce Website</h3>
-        <p>
-          This is an ecommerce website that I created using HTML, CSS, and
-          JavaScript. The website allows you to browse products, add them to
-          your cart, and checkout. You can also filter products by category.
-        </p>
+        <div>
+          <h3>Ecommerce Website</h3>
+          <p>
+            This is an ecommerce website that I created using HTML, CSS, and
+            JavaScript. The website allows you to browse products, add them to
+            your cart, and checkout. You can also filter products by category.
+          </p>
+        </div>
       </section>
     </main>
   </body>
