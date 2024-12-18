@@ -3,42 +3,49 @@ export default function Project() {
   return (
     <>
       <Header />
-      <main className="flex items-center justify-evenly w-4/5 h-[80vh]">
-      <section className="w-[350px] h-[600px] bg-[#d9d9d9] rounded-2xl shadow-2xl flex flex-col items-center justify-start gap-10">
-        <img src="./static/budget.png" alt="Budgeting app" className="w-[280px] h-[230px] rounded-2xl m-10"/>
-        <div className="flex flex-col items-center justify-center w-[70%]">
-          <h3 className="font-semibold text-xl mb-5 underline">Budgeting App</h3>
-          <p>
+      <main className="flex flex-col justify-center items-center h-[100vh] w-[100vh] gap-10">
+        <article className="flex flex-col justify-start items-start w-1/2 gap-5 bg-[#d9d9d9] p-10 rounded-xl border border-black">
+          {/* Sliding image with 3 or more pictures */}
+          <img
+            src="../../static/budget.png"
+            alt="Budgeting app"
+            className="w-[580px] h-auto rounded-lg"
+          />
+          <h3 className="text-2xl font-bold underline">Budgeting App</h3>
+          <div className="flex justify-evenly items-center w-1/2">
+            <a href="https://www.github.com" className="text-blue-700 underline ">
+              Github Repository
+            </a>
+            <a href="https://www.google.com" className="text-blue-700 underline">
+              Preview
+            </a>
+          </div>
+
+          <p className="text-wrap w-2/3">
             This is a budgeting app that I created using Svelte 5. The app
             allows you to add your income and expenses and it will calculate
             your total balance. You can also view your transactions and filter
-            them by date.
+            them by date. The app features a user-friendly interface with
+            real-time updates, making it easy to track your financial
+            activities. <br />
+            Additionally, it includes data visualization tools such as charts
+            and graphs to help you better understand your spending habits. The
+            app is designed to be responsive, ensuring a seamless experience on
+            both desktop and mobile devices. Security measures are also
+            implemented to protect your financial data.
           </p>
-        </div>
-      </section>
-      <section className="w-[350px] h-[600px] bg-[#d9d9d9] rounded-2xl shadow-2xl flex flex-col items-center justify-start gap-10">
-        <img src="./static/todo.png" alt="Todo app" className="w-[280px] h-[230px] rounded-2xl m-10"/>
-        <div className="flex flex-col items-center justify-center w-[70%]">
-          <h3 className="font-semibold text-xl mb-5 underline">To-do list</h3>
-          <p>
-            This is a to-do list app that I created using React. The app allows
-            you to add tasks to a list and mark them as completed. You can also
-            filter the tasks by their status.
-          </p>
-        </div>
-      </section>
-      <section className="w-[350px] h-[600px] bg-[#d9d9d9] rounded-2xl shadow-2xl flex flex-col items-center justify-start gap-10">
-        <img src="./static/ecommerce.png" alt="Ecommerce Page" className="w-[280px] h-[230px] rounded-2xl m-10"/>
-        <div className="flex flex-col items-center justify-center w-[70%]">
-          <h3 className="font-semibold text-xl mb-5 underline">Ecommerce Website</h3>
-          <p>
-            This is an ecommerce website that I created using HTML, CSS, and
-            JavaScript. The website allows you to browse products, add them to
-            your cart, and checkout. You can also filter products by category.
-          </p>
-        </div>
-      </section>
-    </main>
+        </article>
+        <article className="flex flex-col justify-center items-start w-1/2  bg-[#d9d9d9] p-10 rounded-xl border border-black">
+          <h3 className="text-2xl font-bold underline">Technologies</h3>
+          <ul className="list-disc list-inside">
+            <li>Svelte 5</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Chart.js</li>
+          </ul>
+        </article>
+      </main>
     </>
   );
 }

@@ -5,6 +5,7 @@ export default function Projects() {
       <Header />
       <main className="flex items-center justify-evenly w-4/5 h-[80vh]">
       <section className="w-[350px] h-[600px] bg-[#d9d9d9] rounded-2xl shadow-2xl flex flex-col items-center justify-start gap-10">
+      <a href="/project" className="flex flex-col items-center justify-start gap-10">
         <img src="./static/budget.png" alt="Budgeting app" className="w-[280px] h-[230px] rounded-2xl m-10"/>
         <div className="flex flex-col items-center justify-center w-[70%]">
           <h3 className="font-semibold text-xl mb-5 underline">Budgeting App</h3>
@@ -15,8 +16,10 @@ export default function Projects() {
             them by date.
           </p>
         </div>
+        </a>
       </section>
       <section className="w-[350px] h-[600px] bg-[#d9d9d9] rounded-2xl shadow-2xl flex flex-col items-center justify-start gap-10">
+      <a href="/project" className="flex flex-col items-center justify-start gap-10">
         <img src="./static/todo.png" alt="Todo app" className="w-[280px] h-[230px] rounded-2xl m-10"/>
         <div className="flex flex-col items-center justify-center w-[70%]">
           <h3 className="font-semibold text-xl mb-5 underline">To-do list</h3>
@@ -26,8 +29,10 @@ export default function Projects() {
             filter the tasks by their status.
           </p>
         </div>
+        </a>
       </section>
       <section className="w-[350px] h-[600px] bg-[#d9d9d9] rounded-2xl shadow-2xl flex flex-col items-center justify-start gap-10">
+      <a href="/project" className="flex flex-col items-center justify-start gap-10">
         <img src="./static/ecommerce.png" alt="Ecommerce Page" className="w-[280px] h-[230px] rounded-2xl m-10"/>
         <div className="flex flex-col items-center justify-center w-[70%]">
           <h3 className="font-semibold text-xl mb-5 underline">Ecommerce Website</h3>
@@ -37,6 +42,7 @@ export default function Projects() {
             your cart, and checkout. You can also filter products by category.
           </p>
         </div>
+        </a>
       </section>
     </main>
     </>
