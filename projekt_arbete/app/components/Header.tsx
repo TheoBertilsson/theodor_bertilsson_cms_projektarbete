@@ -2,7 +2,7 @@ import React from 'react';
 
 const Header: React.FC = () => {
   return (
-    <header className='text-center p-2.5 w-full flex justify-between items-center border-b-black'>
+    <header className='text-center p-2.5 w-full flex justify-between items-center border-b-black border'>
       <a href="/">
         <img
           src="./static/profil.png"
