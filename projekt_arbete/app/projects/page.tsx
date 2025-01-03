@@ -3,10 +3,10 @@ export default function Projects() {
   return (
     <>
       <Header />
-      <main className="flex items-center justify-evenly w-4/5 h-[80vh]">
-      <section className="w-[350px] h-[600px] bg-[#d9d9d9] rounded-2xl shadow-2xl flex flex-col items-center justify-start gap-10">
-      <a href="/project" className="flex flex-col items-center justify-start gap-10">
-        <img src="./static/budget.png" alt="Budgeting app" className="w-[280px] h-[230px] rounded-2xl m-10"/>
+      <main className="flex items-center justify-evenly w-4/5 h-[80vh] gap-5">
+      <section className="w-[350px] h-[600px] bg-[#FBFADA] rounded-2xl shadow-2xl flex flex-col items-center justify-start gap-5 border-2 border-border">
+      <a href="/project" className="flex flex-col items-center justify-start gap-5">
+        <img src="./static/budget.png" alt="Budgeting app" className="w-[280px] h-[230px] rounded-2xl m-10 border border-border"/>
         <div className="flex flex-col items-center justify-center w-[70%]">
           <h3 className="font-semibold text-xl mb-5 underline">Budgeting App</h3>
           <p>
@@ -18,9 +18,9 @@ export default function Projects() {
         </div>
         </a>
       </section>
-      <section className="w-[350px] h-[600px] bg-[#d9d9d9] rounded-2xl shadow-2xl flex flex-col items-center justify-start gap-10">
-      <a href="/project" className="flex flex-col items-center justify-start gap-10">
-        <img src="./static/todo.png" alt="Todo app" className="w-[280px] h-[230px] rounded-2xl m-10"/>
+      <section className="w-[350px] h-[600px] bg-[#FBFADA] rounded-2xl shadow-2xl flex flex-col items-center justify-start border-2 border-border">
+      <a href="/project" className="flex flex-col items-center justify-start gap-5">
+        <img src="./static/todo.png" alt="Todo app" className="w-[280px] h-[230px] rounded-2xl m-10 border border-border"/>
         <div className="flex flex-col items-center justify-center w-[70%]">
           <h3 className="font-semibold text-xl mb-5 underline">To-do list</h3>
           <p>
@@ -31,9 +31,9 @@ export default function Projects() {
         </div>
         </a>
       </section>
-      <section className="w-[350px] h-[600px] bg-[#d9d9d9] rounded-2xl shadow-2xl flex flex-col items-center justify-start gap-10">
-      <a href="/project" className="flex flex-col items-center justify-start gap-10">
-        <img src="./static/ecommerce.png" alt="Ecommerce Page" className="w-[280px] h-[230px] rounded-2xl m-10"/>
+      <section className="w-[350px] h-[600px] bg-[#FBFADA] rounded-2xl shadow-2xl flex flex-col items-center justify-start border-2 border-border">
+      <a href="/project" className="flex flex-col items-center justify-start gap-5">
+        <img src="./static/ecommerce.png" alt="Ecommerce Page" className="w-[280px] h-[230px] rounded-2xl m-10 border border-border"/>
         <div className="flex flex-col items-center justify-center w-[70%]">
           <h3 className="font-semibold text-xl mb-5 underline">Ecommerce Website</h3>
           <p>

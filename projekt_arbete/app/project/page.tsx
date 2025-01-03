@@ -13,10 +13,16 @@ export default function Project() {
           />
           <h3 className="text-2xl font-bold underline">Budgeting App</h3>
           <div className="flex justify-evenly items-center w-1/2">
-            <a href="https://www.github.com" className="text-blue-700 underline ">
+            <a
+              href="https://www.github.com"
+              className="text-blue-700 underline "
+            >
               Github Repository
             </a>
-            <a href="https://www.google.com" className="text-blue-700 underline">
+            <a
+              href="https://www.google.com"
+              className="text-blue-700 underline"
+            >
               Preview
             </a>
           </div>

@@ -8,19 +8,22 @@ export default function Home() {
           <img
             src="./static/profil.png"
             alt="Profile Picture"
-            className="w-80 h-80 rounded-full m-5"
+            className="w-80 h-80 rounded-full m-5 border-2 border-border"
           />
           <h1 className="text-2xl font-bold m-5">Theodor Bertilsson</h1>
-          <p className="w-1/2">
-            I am a 25 year old student at IT-högskolan. I am currently studying
-            to become a frontend developer. I have a passion for design and
-            development and I am always looking for new challenges.
-          </p>
+          <div className="text-center m-5 w-2/3 bg-foreground border-2 border-border rounded-2xl p-4">
+            <h2 className="text-lg font-semibold underline mb-2">About me</h2>
+            <p>
+              I am a 25 year old student at IT-högskolan. I am currently
+              studying to become a frontend developer. I have a passion for
+              design and development and I am always looking for new challenges.
+            </p>
+          </div>
         </section>
         <section className="flex flex-col justify-center items-center">
           <h2 className="text-xl font-bold m-5 underline">Education</h2>
           <div className="flex justify-evenly items-center gap-10 w-5/6">
-            <article className="bg-[#d9d9d9] rounded-2xl border border-black flex flex-col justify-center items-center gap-4 h-[350px]">
+            <article className="bg-foreground rounded-2xl border border-border flex flex-col justify-center items-center gap-4 h-full pb-4">
               <h3 className="text-lg font-semibold m-2">IT-högskolan</h3>
               <p className="w-3/4">
                 I am currently studying at IT-högskolan to become a frontend
@@ -30,7 +33,7 @@ export default function Home() {
                 APIs, and version control systems.
               </p>
             </article>
-            <article className="bg-[#d9d9d9] rounded-2xl border border-black flex flex-col justify-center items-center gap-4 h-[350px]">
+            <article className="bg-foreground rounded-2xl border border-border flex flex-col justify-center items-center gap-4 h-full pb-4">
               <h3 className="text-lg font-semibold m-2">High School</h3>
               <p className="w-3/4">
                 I graduated from high school with a focus on natural sciences. I
@@ -40,7 +43,7 @@ export default function Home() {
                 foundation in problem-solving, critical thinking, and teamwork.
               </p>
             </article>
-            <article className="bg-[#d9d9d9] rounded-2xl border border-black flex flex-col justify-center items-center gap-4 h-[350px]">
+            <article className="bg-foreground rounded-2xl border border-border flex flex-col justify-center items-center gap-4 h-full pb-4">
               <h3 className="text-lg font-semibold m-2">Online Courses</h3>
               <p className="w-3/4">
                 I have completed several online courses to further my knowledge
@@ -55,7 +58,7 @@ export default function Home() {
         <section className="flex flex-col justify-center items-center">
           <h2 className="text-xl font-bold m-5 underline">Experience</h2>
           <div className="flex justify-evenly items-center gap-10 w-5/6">
-            <article className="bg-[#d9d9d9] rounded-2xl border border-black flex flex-col justify-evenly items-center gap-4 h-[350px]">
+            <article className="bg-foreground rounded-2xl border border-border flex flex-col justify-evenly items-center gap-4 h-full pb-4">
               <h3 className="text-lg font-semibold m-2">
                 Frontend Developer Intern
               </h3>
@@ -68,7 +71,7 @@ export default function Home() {
                 technologies, tools, and best practices in the industry.
               </p>
             </article>
-            <article className="bg-[#d9d9d9] rounded-2xl border border-black flex flex-col justify-evenly items-center gap-4 h-[350px]">
+            <article className="bg-foreground rounded-2xl border border-border flex flex-col justify-evenly items-center gap-4 h-full pb-4">
               <h3 className="text-lg font-semibold m-2">
                 Freelance Web Designer
               </h3>
@@ -82,7 +85,7 @@ export default function Home() {
                 tailored solutions.
               </p>
             </article>
-            <article className="bg-[#d9d9d9] rounded-2xl border border-black flex flex-col justify-evenly items-center gap-4 h-[350px]">
+            <article className="bg-foreground rounded-2xl border border-border flex flex-col justify-evenly items-center gap-4 h-full pb-4">
               <h3 className="text-lg font-semibold m-2">
                 IT Support @ Elgiganten
               </h3>
@@ -99,7 +102,7 @@ export default function Home() {
         </section>
         <section className="flex flex-col justify-center items-center">
           <h2 className="text-xl font-bold m-5 underline">Skills</h2>
-          <ul className="p-10 flex flex-col max-h-80 flex-wrap gap-10 justify-center items-center bg-[#d9d9d9] rounded-2xl border border-black">
+          <ul className="p-10 flex flex-col max-h-80 flex-wrap gap-10 justify-center items-center bg-foreground rounded-2xl border border-border">
             <li>HTML</li>
             <li>CSS</li>
             <li>JavaScript</li>
