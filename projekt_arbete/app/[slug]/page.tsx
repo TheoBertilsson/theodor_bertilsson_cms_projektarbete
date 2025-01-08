@@ -1,5 +1,18 @@
+import { createClient } from "contentful";
 import Header from "../components/Header";
-export default function Project() {
+
+export default async function Project() {
+  if (
+    !process.env.CONTENTFUL_SPACE_ID ||
+    !process.env.CONTENTFUL_ACCESS_TOKEN
+  ) {
+    throw new Error("Contentful space ID and access token are required");
+  }
+  const client = createClient({
+    space: process.env.CONTENTFUL_SPACE_ID,
+    accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+  });
+  const response = await client.getEntries({ content_type: "portfolio" });
   return (
     <>
       <Header />
