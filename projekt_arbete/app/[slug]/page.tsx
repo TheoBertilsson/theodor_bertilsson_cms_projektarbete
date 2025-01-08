@@ -79,7 +79,15 @@ export default async function Project({
             </article>
           </>
         ) : (
-          <p>Project not found</p>
+          <div>
+            <p>Project not found</p>
+            <button
+              onClick={() => (window.location.href = "/projects")}
+              className="mt-5 p-2 bg-blue-500 text-white rounded"
+            >
+              Go to Projects
+            </button>
+          </div>
         )}
       </main>
     </>
