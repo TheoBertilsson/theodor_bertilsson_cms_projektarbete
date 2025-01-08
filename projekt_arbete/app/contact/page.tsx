@@ -1,5 +1,17 @@
+import { createClient } from "contentful";
 import Header from "../components/Header";
-export default function Contact() {
+export default async function Contact() {
+  if (
+    !process.env.CONTENTFUL_SPACE_ID ||
+    !process.env.CONTENTFUL_ACCESS_TOKEN
+  ) {
+    throw new Error("Contentful space ID and access token are required");
+  }
+  const client = createClient({
+    space: process.env.CONTENTFUL_SPACE_ID,
+    accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+  });
+  const response = await client.getEntries({ content_type: "socials" });
   return (
     <>
       <Header />
@@ -15,15 +27,11 @@ export default function Contact() {
               Find me online!
             </h2>
             <ul className="flex justify-center items-center gap-5">
-              <li className="text-blue-700 underline">
-                <a href="https://www.linkedin.com/in/theodor-bertilsson-887b9a178/">LinkedIn</a>
-              </li>
-              <li className="text-blue-700 underline">
-                <a href="https://github.com/TheoBertilsson">Github</a>
-              </li>
-              <li className="text-blue-700 underline">
-                <a href="https://www.twitter.com">Twitter</a>
-              </li>
+              {response.items.map((item: any, index:number) => (
+                <li className="text-blue-700 underline" key={index}>
+                  <a href={item.fields.url}>{item.fields.platform}</a>
+                </li>
+              ))}{" "}
             </ul>
           </div>
         </section>
