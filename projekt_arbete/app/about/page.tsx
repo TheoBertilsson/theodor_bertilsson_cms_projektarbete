@@ -3,15 +3,15 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main className="flex flex-col items-center justify-evenly w-full h-full gap-20 p-20">
-        <section className="flex flex-col items-center justify-center">
+      <main className="flex flex-col items-center justify-evenly w-full h-full p-10">
+        <section className="flex flex-col items-center justify-center w-full">
           <img
-            src="./static/profil.png"
+            src="./static/profil.jpg"
             alt="Profile Picture"
-            className="w-80 h-80 rounded-full m-5 border-2 border-border"
+            className="w-auto h-auto rounded-full m-5 border-2 border-border max-w-80 max-h-80"
           />
-          <h1 className="text-2xl font-bold m-5">Theodor Bertilsson</h1>
-          <div className="text-center m-5 w-2/3 bg-foreground border-2 border-border rounded-2xl p-4">
+          <h1 className="text-2xl font-bold text-center">Theodor Bertilsson</h1>
+          <div className="text-center m-5 w-full bg-foreground border-2 border-border rounded-2xl p-4">
             <h2 className="text-lg font-semibold underline mb-2">About me</h2>
             <p>
               I am a 25 year old student at IT-högskolan. I am currently
@@ -22,7 +22,7 @@ export default function Home() {
         </section>
         <section className="flex flex-col justify-center items-center">
           <h2 className="text-xl font-bold m-5 underline">Education</h2>
-          <div className="flex justify-evenly items-center gap-10 w-5/6">
+          <div className="flex justify-evenly items-center gap-10 flex-wrap">
             <article className="bg-foreground rounded-2xl border border-border flex flex-col justify-center items-center gap-4 h-full pb-4">
               <h3 className="text-lg font-semibold m-2">IT-högskolan</h3>
               <p className="w-3/4">
@@ -57,7 +57,7 @@ export default function Home() {
         </section>
         <section className="flex flex-col justify-center items-center">
           <h2 className="text-xl font-bold m-5 underline">Experience</h2>
-          <div className="flex justify-evenly items-center gap-10 w-5/6">
+          <div className="flex justify-evenly items-center gap-10 flex-wrap">
             <article className="bg-foreground rounded-2xl border border-border flex flex-col justify-evenly items-center gap-4 h-full pb-4">
               <h3 className="text-lg font-semibold m-2">
                 Frontend Developer Intern
@@ -102,7 +102,7 @@ export default function Home() {
         </section>
         <section className="flex flex-col justify-center items-center">
           <h2 className="text-xl font-bold m-5 underline">Skills</h2>
-          <ul className="p-10 flex flex-col max-h-80 flex-wrap gap-10 justify-center items-center bg-foreground rounded-2xl border border-border">
+          <ul className="p-10 flex flex-wrap gap-10 justify-center items-center bg-foreground rounded-2xl border border-border">
             <li>HTML</li>
             <li>CSS</li>
             <li>JavaScript</li>
