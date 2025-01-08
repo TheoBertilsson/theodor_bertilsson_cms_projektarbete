@@ -3,7 +3,7 @@ export default function Contact() {
   return (
     <>
       <Header />
-      <main className="flex flex-col md:flex-row justify-center items-center gap-10 md:gap-20">
+      <main className="flex flex-col lg:flex-row justify-center items-center gap-10 md:gap-20">
         <section className="flex flex-col justify-center items-center gap-5">
           <img
             src="./static/profil.jpg"
@@ -16,10 +16,10 @@ export default function Contact() {
             </h2>
             <ul className="flex justify-center items-center gap-5">
               <li className="text-blue-700 underline">
-                <a href="https://www.linkedin.com">LinkedIn</a>
+                <a href="https://www.linkedin.com/in/theodor-bertilsson-887b9a178/">LinkedIn</a>
               </li>
               <li className="text-blue-700 underline">
-                <a href="https://www.github.com">Github</a>
+                <a href="https://github.com/TheoBertilsson">Github</a>
               </li>
               <li className="text-blue-700 underline">
                 <a href="https://www.twitter.com">Twitter</a>

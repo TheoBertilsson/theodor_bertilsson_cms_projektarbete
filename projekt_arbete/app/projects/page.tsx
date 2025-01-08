@@ -18,12 +18,12 @@ export default async function Projects() {
   return (
     <>
       <Header />
-      <main className="flex items-center justify-evenly w-4/5 h-[80vh] gap-10 flex-wrap m-16">
+      <main className="flex items-center justify-evenly gap-10 flex-wrap m-10">
         {response.items.map((item: any) => (
           <section key={item.sys.id} className="w-[350px] pb-10 bg-[#FBFADA] rounded-2xl shadow-2xl flex flex-col items-center justify-start gap-5 border-2 border-border">
             <a
               href={`/${item.fields.slug}`}
-              className="flex flex-col items-center justify-start gap-5"
+              className="flex flex-col items-center justify-start gap-5 p-5"
             >
               <img
                 src={item.fields.thumbnailImage.fields.file.url}

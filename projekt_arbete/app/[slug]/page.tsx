@@ -1,6 +1,7 @@
 import { createClient } from "contentful";
 import Header from "../components/Header";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import type { Document } from "@contentful/rich-text-types";
 
 export default async function Project({params}:{params:{slug:string}}) {
   const { slug } = params;
@@ -20,7 +21,7 @@ export default async function Project({params}:{params:{slug:string}}) {
   return (
     <>
       <Header />
-      <main className="flex flex-col justify-center items-center h-full w-[100vh] gap-10">
+      <main className="flex flex-col justify-center items-center h-full w-[100vh] p-5">
 
         {project ? (
           <>
@@ -49,11 +50,11 @@ export default async function Project({params}:{params:{slug:string}}) {
               </div>
 
               <p className="text-wrap">
-              {documentToReactComponents(project.fields.description)}
+              {project.fields.description && documentToReactComponents(project.fields.description as Document)}
               </p>
               <h3 className="text-2xl font-bold underline mt-5">Technologies</h3>
               <ul className=" list-inside flex w-full justify-evenly my-5 font-semibold">
-                {project.fields.technologies.map((technology: string, index: number) => (
+                {project.fields.technologies && project.fields.technologies.map((technology: string, index: number) => (
                   <li key={index} className="border-2 border-black rounded-full p-2 min-w-24 text-center">{technology} </li>
                 ))}
               </ul>
