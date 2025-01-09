@@ -1,6 +1,7 @@
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-import Header from "../components/Header";
+// app/projects/page.tsx
 import { createClient } from "contentful";
+import Header from "../components/Header";
+import ProjectCard from "../components/ProjectCard";
 
 export default async function Projects() {
   if (
@@ -9,41 +10,22 @@ export default async function Projects() {
   ) {
     throw new Error("Contentful space ID and access token are required");
   }
+
+  // Fetch data from Contentful
   const client = createClient({
     space: process.env.CONTENTFUL_SPACE_ID,
     accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
   });
+
   const response = await client.getEntries({ content_type: "portfolio" });
-  console.log(response.items);
 
   return (
     <>
       <Header />
       <main className="flex items-center justify-evenly gap-10 flex-wrap m-10">
         {response.items.map((item: any) => (
-          <section key={item.sys.id} className="w-[350px] h-[600px] pb-10 bg-[#FBFADA] rounded-2xl shadow-2xl flex flex-col items-center justify-start gap-5 border-2 border-border">
-            <a
-              href={`/${item.fields.slug}`}
-              className="flex flex-col items-center justify-start gap-5 p-5"
-            >
-              
-              <img
-                src={item.fields.thumbnailImage.fields.file.url}
-                alt={item.fields.title}
-                className="w-[280px] h-[280px] rounded-2xl m-3 border border-border"
-              />
-              <div className="flex flex-col items-center justify-center w-[70%]">
-                <h3 className="font-semibold text-xl mb-5 underline">
-                  {item.fields.title}
-                </h3>
-                <p className="line-clamp-6">
-                {documentToReactComponents(item.fields.description)}
-                </p>
-              </div>
-            </a>
-          </section>
+          <ProjectCard key={item.sys.id} project={item} />
         ))}
-
       </main>
     </>
   );

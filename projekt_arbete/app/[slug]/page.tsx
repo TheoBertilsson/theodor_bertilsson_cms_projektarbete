@@ -18,8 +18,12 @@ export default async function Project({ params }: { params: { slug: string } }) 
     accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
   });
 
-  const response = await client.getEntries({ content_type: "portfolio" });
-  const project = response.items.find((item) => item.fields.slug === slug);
+  const response = await client.getEntries({
+    content_type: "portfolio",
+    "fields.slug": slug,
+  });
+
+  const project = response.items[0];
 
   if (!project) {
     notFound();
@@ -48,10 +52,7 @@ function ProjectDetails({ project }: { project: any }) {
           Github Repository
         </a>
       </div>
-
-      <p className="text-wrap">
         {documentToReactComponents(project.fields.description as Document)}
-      </p>
       <h3 className="text-2xl font-bold underline mt-5">Technologies</h3>
       <ul className="list-inside flex w-full justify-evenly my-5 gap-5 font-semibold flex-wrap">
         {project.fields.technologies?.map((technology: string, index: number) => (
