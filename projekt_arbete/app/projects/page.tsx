@@ -20,7 +20,7 @@ export default async function Projects() {
       <Header />
       <main className="flex items-center justify-evenly gap-10 flex-wrap m-10">
         {response.items.map((item: any) => (
-          <section key={item.sys.id} className="w-[350px] pb-10 bg-[#FBFADA] rounded-2xl shadow-2xl flex flex-col items-center justify-start gap-5 border-2 border-border">
+          <section key={item.sys.id} className="w-[350px] h-[600px] pb-10 bg-[#FBFADA] rounded-2xl shadow-2xl flex flex-col items-center justify-start gap-5 border-2 border-border">
             <a
               href={`/${item.fields.slug}`}
               className="flex flex-col items-center justify-start gap-5 p-5"
@@ -28,7 +28,7 @@ export default async function Projects() {
               <img
                 src={item.fields.thumbnailImage.fields.file.url}
                 alt={item.fields.title}
-                className="w-[280px] rounded-2xl m-3 border border-border"
+                className="w-[280px] h-[280px] rounded-2xl m-3 border border-border"
               />
               <div className="flex flex-col items-center justify-center w-[70%]">
                 <h3 className="font-semibold text-xl mb-5 underline">

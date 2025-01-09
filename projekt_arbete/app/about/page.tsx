@@ -39,27 +39,31 @@ export default async function Home() {
         <section className="flex flex-col justify-center items-center">
           <h2 className="text-xl font-bold m-5 underline">Education</h2>
           <div className="flex justify-evenly items-center gap-10 flex-wrap">
-            {education.items.map((item: any) => (
-              <article className="bg-foreground rounded-2xl border border-border flex flex-col justify-center items-center gap-4 h-full p-5 text-center">
-                <h3 className="font-semibold underline ">
-                  {item.fields.title}
-                </h3>
-                {documentToReactComponents(item.fields.description)}
-              </article>
-            ))}
+            <article className="bg-foreground rounded-2xl border border-border flex flex-col justify-center items-center gap-4 h-full p-5 text-center">
+              {education.items.map((item: any) => (
+                <>
+                  <h3 className="font-semibold underline ">
+                    {item.fields.title}
+                  </h3>
+                  {documentToReactComponents(item.fields.description)}
+                </>
+              ))}
+            </article>
           </div>
         </section>
         <section className="flex flex-col justify-center items-center">
           <h2 className="text-xl font-bold m-5 underline">Experience</h2>
           <div className="flex justify-evenly items-center gap-10 flex-wrap">
-            {experience.items.map((item: any) => (
-              <article className="bg-foreground rounded-2xl border border-border flex flex-col justify-evenly items-center gap-4 h-full p-5 text-center">
-                <h3 className="font-semibold underline ">
-                  {item.fields.title}
-                </h3>
-                {documentToReactComponents(item.fields.description)}
-              </article>
-            ))}
+            <article className="bg-foreground rounded-2xl border border-border flex flex-col justify-evenly items-center gap-4 h-full p-5 text-center">
+              {experience.items.map((item: any) => (
+                <>
+                  <h3 className="font-semibold underline ">
+                    {item.fields.title}
+                  </h3>
+                  {documentToReactComponents(item.fields.description)}
+                </>
+              ))}
+            </article>
           </div>
         </section>
         {response.items.map((item: any) => (
