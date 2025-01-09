@@ -14,6 +14,7 @@ export default async function Projects() {
     accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
   });
   const response = await client.getEntries({ content_type: "portfolio" });
+  console.log(response.items);
 
   return (
     <>
@@ -25,6 +26,7 @@ export default async function Projects() {
               href={`/${item.fields.slug}`}
               className="flex flex-col items-center justify-start gap-5 p-5"
             >
+              
               <img
                 src={item.fields.thumbnailImage.fields.file.url}
                 alt={item.fields.title}
