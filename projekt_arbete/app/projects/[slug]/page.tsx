@@ -48,7 +48,7 @@ export default async function Project({
 
 function ProjectDetails({ project }: { project: any }) {
   return (
-    <article className="flex flex-col justify-center items-center w-full gap-5 bg-foreground p-10 rounded-xl border border-black lg:max-w-[75%]">
+    <article className="flex flex-col justify-center items-center w-full gap-5 bg-foreground p-10 rounded-xl border border-black lg:max-w-[75%] shadow-lg">
       <ImageSlider images={project.fields.featureImages} />
       <h3 className="text-2xl font-bold underline">{project.fields.title}</h3>
       <div className="flex justify-center items-center w-1/2 gap-5">

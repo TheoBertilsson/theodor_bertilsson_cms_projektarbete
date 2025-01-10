@@ -1,7 +1,7 @@
 import React from "react";
 const Header: React.FC = () => {
   return (
-    <header className="p-4 w-full flex justify-between items-center bg-[#436850] ">
+    <header className="p-4 w-full flex justify-between items-center bg-[#436850] shadow-lg">
       <a href="/" className="text-3xl font-semibold text-foreground">
         TB
       </a>
