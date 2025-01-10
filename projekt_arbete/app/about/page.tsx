@@ -25,7 +25,7 @@ export default async function Home() {
             <img
               src={item.fields.profile.fields.file.url}
               alt="Profile Picture"
-              className="w-auto h-auto rounded-full m-5 border-2 border-border max-w-80 max-h-80"
+              className="w-80 h-80 rounded-full m-5 border-2 border-border"
             />
             <h1 className="text-2xl font-bold text-center">
               {item.fields.name}

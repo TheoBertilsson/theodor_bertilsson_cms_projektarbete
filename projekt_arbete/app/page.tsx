@@ -15,7 +15,7 @@ export default async function Home() {
   const response = await client.getEntries({ content_type: "aboutMe" });
 
   return (
-    <main className="flex flex-col items-center justify-evenly h-[100vh] w-4/5">
+    <main className="flex flex-col items-center justify-evenly w-4/5 mb-5">
       {response.items.map((item: any) => (
         <div className="flex flex-col items-center justify-center">
           <img

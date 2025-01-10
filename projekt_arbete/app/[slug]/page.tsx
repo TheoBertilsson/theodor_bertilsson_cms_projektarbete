@@ -24,6 +24,7 @@ export default async function Project({ params }: { params: { slug: string } }) 
   });
 
   const project = response.items[0];
+  
 
   if (!project) {
     notFound();

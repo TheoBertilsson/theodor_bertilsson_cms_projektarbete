@@ -12,7 +12,9 @@ const CategoryNav: FC<CategoryNavProps> = ({ uniqueCategories, projects }) => {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
   const handleCategoryClick = (uniqueCategories: string | null) => {
-    setSelectedCategory(uniqueCategories === selectedCategory ? null : uniqueCategories);
+    setSelectedCategory(
+      uniqueCategories === selectedCategory ? null : uniqueCategories
+    );
   };
   // Filter projects by selected category
   const [filteredProjects, setFilteredProjects] = useState(projects);
@@ -25,12 +27,10 @@ const CategoryNav: FC<CategoryNavProps> = ({ uniqueCategories, projects }) => {
       : projects;
     setFilteredProjects(filtered);
   }, [selectedCategory, projects]);
-    console.log(projects);
-
 
   return (
     <>
-      <nav className="flex justify-center gap-5 ">
+      <nav className="flex justify-center gap-5 w-full flex-wrap">
         {uniqueCategories.map((category) => (
           <button
             key={category}

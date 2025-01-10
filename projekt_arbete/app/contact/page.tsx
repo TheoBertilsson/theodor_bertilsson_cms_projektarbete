@@ -15,12 +15,12 @@ export default async function Contact() {
   return (
     <>
       <Header />
-      <main className="flex flex-col lg:flex-row justify-center items-center gap-10 md:gap-20">
-        <section className="flex flex-col justify-center items-center gap-5">
+      <main className="flex flex-col lg:flex-row justify-center items-center gap-10 md:gap-20 w-full p-20">
+        <section className="flex flex-col justify-center items-center gap-5 w-2/3">
           <img
             src="./static/profil.jpg"
             alt="Profile Picture"
-            className="max-w-80 max-h-80 rounded-full m-5 border-2 border-border"
+            className="w-80 h-80 rounded-full m-5 border-2 border-border"
           />
           <div className="bg-foreground rounded-2xl w-full flex flex-col items-center justify-center p-4 border-2 border-border">
             <h2 className="text-xl font-semibold m-5 underline">
@@ -38,7 +38,7 @@ export default async function Contact() {
         <form
           action="/submit"
           method="post"
-          className="flex flex-col justify-center items-center gap-5 mb-5 md:mb-0 bg-foreground w-full p-4 border-2 border-black rounded-2xl"
+          className="flex flex-col justify-center items-center gap-5 mb-5 md:mb-0 bg-foreground p-4 border-2 border-black rounded-2xl w-2/3"
         >
           <h3 className="font-semibold text-2xl">Contact me</h3>
           <div className="flex flex-col md:flex-row justify-center items-center gap-5">
