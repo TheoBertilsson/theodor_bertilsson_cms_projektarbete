@@ -1,4 +1,3 @@
-// app/project/[slug]/page.tsx
 import { createClient } from "contentful";
 import Header from "../../components/Header";
 import ImageSlider from "../../components/ImageSlider";
@@ -7,14 +6,8 @@ import { Document } from "@contentful/rich-text-types";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 
-type Props = {
-  params: {
-    slug: string;
-  };
-};
-
-export default async function Project({ params,  }: Props) {
-  const { slug } = params;
+export default async function Project({ params }: { params: { slug: string } }) {
+  const { slug } = await params;
 
   if (
     !process.env.CONTENTFUL_SPACE_ID ||
