@@ -12,9 +12,9 @@ export default async function Home() {
     space: process.env.CONTENTFUL_SPACE_ID,
     accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
   });
-  const response:any = await client.getEntries({ content_type: "aboutMe" });
-  const experience:any = await client.getEntries({ content_type: "experience" });
-  const education:any = await client.getEntries({ content_type: "education" });
+  const response = await client.getEntries({ content_type: "aboutMe" });
+  const experience = await client.getEntries({ content_type: "experience" });
+  const education = await client.getEntries({ content_type: "education" });
 
   return (
     <>

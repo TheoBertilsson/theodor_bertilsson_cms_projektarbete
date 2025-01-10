@@ -19,9 +19,9 @@ export default async function Projects() {
 
   const response = await client.getEntries({ content_type: "portfolio" });
   const categories = response.items.flatMap(
-    (item: any) => item.fields.categories
+    (item) => (item.fields.categories as string[])
   );
-  const uniqueCategories = Array.from(new Set(categories)).sort();
+  const uniqueCategories:string[] = Array.from(new Set(categories)).sort();
 
   return (
     <>
@@ -39,8 +39,8 @@ function ProjectDetails({
   projects,
   uniqueCategories,
 }: {
-  projects: any;
-  uniqueCategories: any;
+  projects: unknown;
+  uniqueCategories: string[];
 }) {
   return (
     <>

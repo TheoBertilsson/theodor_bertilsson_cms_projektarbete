@@ -13,7 +13,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   });
 
   // Create project URLs
-  const projectUrls = projects.items.map((project: any) => ({
+  const projectUrls = projects.items.map((project) => ({
     url: `https://your-domain.com/projects/${project.fields.slug}`,
     lastModified: new Date(),
     changeFrequency: "monthly" as const,
