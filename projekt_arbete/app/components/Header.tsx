@@ -1,20 +1,29 @@
-import React from 'react';
-
+import React from "react";
 const Header: React.FC = () => {
-  
   return (
-    <header className='p-2.5 w-full flex justify-between items-center border-[#436850] border-b-black border-2 bg-[#436850] '>
-      <a href="/">
-        <img
-          src="./static/profil.jpg"
-          alt="Profile picture"
-          className="w-12 h-12 rounded-full m-2.5 border-2 border-border"
-        />
+    <header className="p-4 w-full flex justify-between items-center bg-[#436850] ">
+      <a href="/" className="text-3xl font-semibold text-foreground">
+        TB
       </a>
-      <nav className='flex justify-evenly gap-5'>
-        <a href="/projects" className='no-underline text-foreground font-semibold text-lg hover:underline'>Projects</a>
-        <a href="/about" className='no-underline text-foreground font-semibold text-lg hover:underline'>About me</a>
-        <a href="/contact" className='no-underline text-foreground font-semibold text-lg hover:underline'>Contact</a>
+      <nav className="flex justify-evenly gap-10">
+        <a
+          href="/projects"
+          className="no-underline text-foreground font-semibold text-xl hover:underline"
+        >
+          Projects
+        </a>
+        <a
+          href="/about"
+          className="no-underline text-foreground font-semibold text-xl hover:underline"
+        >
+          About me
+        </a>
+        <a
+          href="/contact"
+          className="no-underline text-foreground font-semibold text-xl hover:underline"
+        >
+          Contact
+        </a>
       </nav>
     </header>
   );

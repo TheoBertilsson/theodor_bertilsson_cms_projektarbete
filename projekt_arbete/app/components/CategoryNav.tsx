@@ -34,6 +34,7 @@ const CategoryNav: FC<CategoryNavProps> = ({ uniqueCategories, projects }) => {
         {uniqueCategories.map((category) => (
           <button
             key={category}
+            aria-label={`Filter by ${category}`}
             className={`${
               selectedCategory === category ? "underline font-semibold" : ""
             } p-2`}

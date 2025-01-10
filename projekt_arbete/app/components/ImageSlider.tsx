@@ -22,6 +22,7 @@ export default function ImageSlider({ images }: { images: any[] }) {
         <img
           src={images[currentImageIndex]?.fields.file.url}
           alt={images[currentImageIndex]?.fields.title}
+          aria-label={images[currentImageIndex]?.fields.title}
           className="rounded-lg max-h-[500px]"
         />
       )}

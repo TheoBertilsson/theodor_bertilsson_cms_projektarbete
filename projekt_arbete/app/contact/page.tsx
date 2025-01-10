@@ -20,14 +20,14 @@ export default async function Contact() {
           <img
             src="./static/profil.jpg"
             alt="Profile Picture"
-            className="w-80 h-80 rounded-full m-5 border-2 border-border"
+            className="w-80 h-80 rounded-full m-5 border-2 border-border shadow-lg"
           />
-          <div className="bg-foreground rounded-2xl w-full flex flex-col items-center justify-center p-4 border-2 border-border">
+          <div className="bg-foreground rounded-lg w-full flex flex-col items-center justify-center p-4 border-2 border-border shadow-lg">
             <h2 className="text-xl font-semibold m-5 underline">
               Find me online!
             </h2>
             <ul className="flex justify-center items-center gap-5">
-              {response.items.map((item: any, index:number) => (
+              {response.items.map((item: any, index: number) => (
                 <li className="text-blue-700 underline" key={index}>
                   <a href={item.fields.url}>{item.fields.platform}</a>
                 </li>
@@ -38,7 +38,7 @@ export default async function Contact() {
         <form
           action="/submit"
           method="post"
-          className="flex flex-col justify-center items-center gap-5 mb-5 md:mb-0 bg-foreground p-4 border-2 border-black rounded-2xl w-2/3"
+          className="flex flex-col justify-center items-center gap-5 mb-5 md:mb-0 bg-foreground p-4 border-2 border-black rounded-lg w-2/3 shadow-lg"
         >
           <h3 className="font-semibold text-2xl">Contact me</h3>
           <div className="flex flex-col md:flex-row justify-center items-center gap-5">
