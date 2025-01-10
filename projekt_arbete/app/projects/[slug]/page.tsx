@@ -7,13 +7,13 @@ import { Document } from "@contentful/rich-text-types";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 
-interface PageProps {
+type Props = {
   params: {
     slug: string;
   };
-}
+};
 
-export default async function Project({ params }: PageProps) {
+export default async function Project({ params,  }: Props) {
   const { slug } = params;
 
   if (
