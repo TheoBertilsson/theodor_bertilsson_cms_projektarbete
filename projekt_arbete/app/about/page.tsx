@@ -12,9 +12,9 @@ export default async function Home() {
     space: process.env.CONTENTFUL_SPACE_ID,
     accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
   });
-  const response = await client.getEntries({ content_type: "aboutMe" });
-  const experience = await client.getEntries({ content_type: "experience" });
-  const education = await client.getEntries({ content_type: "education" });
+  const response:any = await client.getEntries({ content_type: "aboutMe" });
+  const experience:any = await client.getEntries({ content_type: "experience" });
+  const education:any = await client.getEntries({ content_type: "education" });
 
   return (
     <>
@@ -43,12 +43,10 @@ export default async function Home() {
           <div className="flex justify-evenly items-center gap-10 flex-wrap shadow-lg">
             <article className="bg-foreground rounded-lg border border-border flex flex-col justify-center items-center gap-4 h-full p-5 text-center">
               {education.items.map((item: any) => (
-                <>
-                  <h3 className="font-semibold underline ">
-                    {item.fields.title}
-                  </h3>
-                  {documentToReactComponents(item.fields.description)}
-                </>
+                <div key={item.sys.id}>
+                <h3 className="font-semibold underline">{item.fields.title}</h3>
+                {documentToReactComponents(item.fields.description)}
+              </div>
               ))}
             </article>
           </div>
@@ -58,22 +56,20 @@ export default async function Home() {
           <div className="flex justify-evenly items-center gap-10 flex-wrap shadow-lg">
             <article className="bg-foreground rounded-lg border border-border flex flex-col justify-evenly items-center gap-4 h-full p-5 text-center">
               {experience.items.map((item: any) => (
-                <>
-                  <h3 className="font-semibold underline ">
-                    {item.fields.title}
-                  </h3>
-                  {documentToReactComponents(item.fields.description)}
-                </>
+                <div key={item.sys.id}>
+                <h3 className="font-semibold underline">{item.fields.title}</h3>
+                {documentToReactComponents(item.fields.description)}
+              </div>
               ))}
             </article>
           </div>
         </section>
         {response.items.map((item: any) => (
-          <section className="flex flex-col justify-center items-center">
+          <section key={item.sys.id} className="flex flex-col justify-center items-center">
             <h2 className="text-3xl font-bold m-5 underline">Skills</h2>
             <ul className="p-10 flex flex-wrap gap-10 justify-center items-center bg-foreground rounded-lg border border-border shadow-lg">
-              {item.fields.skills.map((skill: string) => (
-                <li key={skill}>{skill} </li>
+              {item.fields.skills.map((skill: string, index: number) => (
+                <li key={index}>{skill} </li>
               ))}
             </ul>
           </section>
