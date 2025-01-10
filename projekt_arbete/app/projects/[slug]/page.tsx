@@ -7,12 +7,14 @@ import { Document } from "@contentful/rich-text-types";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 
-export default async function Project({
-  params,
-}: {
-  params: { slug: string };
-}) {
-  const { slug } = await params;
+interface PageProps {
+  params: {
+    slug: string;
+  };
+}
+
+export default async function Project({ params }: PageProps) {
+  const { slug } = params;
 
   if (
     !process.env.CONTENTFUL_SPACE_ID ||
@@ -59,7 +61,10 @@ function ProjectDetails({ project }: { project: any }) {
         >
           Live Preview
         </Link>
-        <Link href={project.fields.githubRepo} className="text-blue-700 underline">
+        <Link
+          href={project.fields.githubRepo}
+          className="text-blue-700 underline"
+        >
           Github Repository
         </Link>
       </div>
