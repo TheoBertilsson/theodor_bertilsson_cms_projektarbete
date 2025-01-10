@@ -17,23 +17,23 @@ export default function ImageSlider({ images }: { images: any[] }) {
   };
 
   return (
-    <div className="flex justify-center items-center w-full ">
+    <div className="flex justify-center items-center w-full relative">
       {images && (
         <img
           src={images[currentImageIndex]?.fields.file.url}
           alt={images[currentImageIndex]?.fields.title}
-          className="rounded-lg h-[500px]"
+          className="rounded-lg max-h-[500px]"
         />
       )}
 
       <button
-        className="absolute left-16 top-1/2 transform -translate-y-1/2 text-black text-3xl"
+        className="absolute left-[-20px] md:left-0 top-1/2 transform -translate-y-1/2 text-black text-3xl"
         onClick={() => moveSlide(-1)}
       >
         &#10094;
       </button>
       <button
-        className="absolute right-16 top-1/2 transform -translate-y-1/2 text-black text-3xl"
+        className="absolute right-[-20px] md:right-0 top-1/2 transform -translate-y-1/2 text-black text-3xl"
         onClick={() => moveSlide(1)}
       >
         &#10095;
