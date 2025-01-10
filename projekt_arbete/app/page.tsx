@@ -1,6 +1,7 @@
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { createClient } from "contentful";
 import Header from "./components/Header";
+import Link from "next/link";
 
 export default async function Home() {
   if (
@@ -38,24 +39,24 @@ export default async function Home() {
         ))}
 
         <section className="flex flex-wrap  justify-evenly gap-10 mt-10 w-full">
-          <a
+          <Link
             href="/projects"
             className="w-[350px] h-[270px] rounded-lg border-border border-[1px] no-underline text-black flex justify-center items-center active:bg-[#436850] active:text-white hover:underline text-xl font-bold bg-foreground shadow-lg"
           >
             <h2>Projects</h2>
-          </a>
-          <a
+          </Link>
+          <Link
             href="/about"
             className="w-[350px] h-[270px] rounded-lg border-border border-[1px] no-underline text-black flex justify-center items-center active:bg-[#436850] hover:underline text-xl font-bold active:text-white bg-foreground shadow-lg"
           >
             <h2>About me</h2>
-          </a>
-          <a
+          </Link>
+          <Link
             href="/contact"
             className="w-[350px] h-[270px] rounded-lg border-border border-[1px] no-underline text-black flex justify-center items-center active:bg-[#436850] active:text-white hover:underline text-xl font-bold bg-foreground shadow-lg"
           >
             <h2>Contact</h2>
-          </a>
+          </Link>
         </section>
       </main>
     </>

@@ -5,6 +5,7 @@ import ImageSlider from "../../components/ImageSlider";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { Document } from "@contentful/rich-text-types";
 import { notFound } from "next/navigation";
+import Link from "next/link";
 
 export default async function Project({
   params,
@@ -52,15 +53,15 @@ function ProjectDetails({ project }: { project: any }) {
       <ImageSlider images={project.fields.featureImages} />
       <h3 className="text-2xl font-bold underline">{project.fields.title}</h3>
       <div className="flex justify-center items-center w-1/2 gap-5">
-        <a
+        <Link
           href={project.fields.projectLink}
           className="text-blue-700 underline"
         >
           Live Preview
-        </a>
-        <a href={project.fields.githubRepo} className="text-blue-700 underline">
+        </Link>
+        <Link href={project.fields.githubRepo} className="text-blue-700 underline">
           Github Repository
-        </a>
+        </Link>
       </div>
       {documentToReactComponents(project.fields.description as Document)}
       <h3 className="text-2xl font-bold underline mt-5">Technologies</h3>

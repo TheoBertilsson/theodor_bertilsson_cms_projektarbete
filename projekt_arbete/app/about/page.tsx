@@ -72,8 +72,8 @@ export default async function Home() {
           <section className="flex flex-col justify-center items-center">
             <h2 className="text-3xl font-bold m-5 underline">Skills</h2>
             <ul className="p-10 flex flex-wrap gap-10 justify-center items-center bg-foreground rounded-lg border border-border shadow-lg">
-              {item.fields.skills.map((skill: string, index: number) => (
-                <li key={index}>{skill} </li>
+              {item.fields.skills.map((skill: string) => (
+                <li key={skill}>{skill} </li>
               ))}
             </ul>
           </section>

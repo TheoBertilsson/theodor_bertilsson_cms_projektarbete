@@ -1,5 +1,6 @@
 import { createClient } from "contentful";
 import Header from "../components/Header";
+import Link from "next/link";
 export default async function Contact() {
   if (
     !process.env.CONTENTFUL_SPACE_ID ||
@@ -29,7 +30,7 @@ export default async function Contact() {
             <ul className="flex justify-center items-center gap-5">
               {response.items.map((item: any, index: number) => (
                 <li className="text-blue-700 underline" key={index}>
-                  <a href={item.fields.url}>{item.fields.platform}</a>
+                  <Link href={item.fields.url}>{item.fields.platform}</Link>
                 </li>
               ))}{" "}
             </ul>

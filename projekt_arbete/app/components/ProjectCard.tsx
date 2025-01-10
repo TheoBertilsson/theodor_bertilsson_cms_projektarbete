@@ -2,10 +2,11 @@
 "use client"; // This indicates that this is a client-side component.
 
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import Link from "next/link";
 
 export default function ProjectCard({ project }: { project: any }) {
   return (
-    <a
+    <Link
       className="w-[350px] h-[600px] pb-10 bg-[#FBFADA] rounded-lg shadow-2xl flex flex-col items-center justify-start gap-5 border-2  pt-9 border-border"
       href={`/projects/${project.fields.slug}`}
     >
@@ -22,6 +23,6 @@ export default function ProjectCard({ project }: { project: any }) {
       <div className="flex flex-col items-start justify-start w-[70%] overflow-hidden max-h-52">
         {documentToReactComponents(project.fields.description)}
       </div>
-    </a>
+    </Link>
   );
 }
