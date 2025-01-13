@@ -49,19 +49,19 @@ export default async function Home() {
             href="/projects"
             className="w-[350px] h-[270px] rounded-lg border-border border-[1px] no-underline text-black flex justify-center items-center active:bg-[#436850] active:text-white hover:underline text-xl font-bold bg-foreground shadow-lg"
           >
-            <h2>Projects</h2>
+            <span>Projects</span>
           </Link>
           <Link
             href="/about"
             className="w-[350px] h-[270px] rounded-lg border-border border-[1px] no-underline text-black flex justify-center items-center active:bg-[#436850] hover:underline text-xl font-bold active:text-white bg-foreground shadow-lg"
           >
-            <h2>About me</h2>
+            <span>About me</span>
           </Link>
           <Link
             href="/contact"
             className="w-[350px] h-[270px] rounded-lg border-border border-[1px] no-underline text-black flex justify-center items-center active:bg-[#436850] active:text-white hover:underline text-xl font-bold bg-foreground shadow-lg"
           >
-            <h2>Contact</h2>
+            <span>Contact</span>
           </Link>
         </section>
       </main>
