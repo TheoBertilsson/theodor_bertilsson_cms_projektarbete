@@ -19,13 +19,14 @@ export default async function Contact() {
       <Header />
       <main className="flex flex-col lg:flex-row justify-center items-center gap-10 md:gap-20 w-full p-20">
         <section className="flex flex-col justify-center items-center gap-5 w-2/3">
-        {aboutInfo.items.map((item: any)=>(
-          <img
-            src={item.fields.profile?.fields.file.url}
-            alt="Profile Picture"
-            className="w-80 h-80 rounded-full m-5 border-2 border-border shadow-lg"
-          />
-        ))}
+          {aboutInfo.items.map((item: any) => (
+            <img
+              key={item.sys.id}
+              src={item.fields.profile?.fields.file.url}
+              alt="Profile Picture"
+              className="w-80 h-80 rounded-full m-5 border-2 border-border shadow-lg"
+            />
+          ))}
 
           <div className="bg-foreground rounded-lg w-full flex flex-col items-center justify-center p-4 border-2 border-border shadow-lg">
             <h2 className="text-xl font-semibold m-5 underline">

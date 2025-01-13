@@ -21,7 +21,10 @@ export default async function Home() {
       <Header />
       <main className="flex flex-col items-center justify-evenly w-full h-full p-10">
         {response.items.map((item: any) => (
-          <section className="flex flex-col-reverse lg:flex-row items-center justify-center gap-10">
+          <section
+            key={item.sys.id}
+            className="flex flex-col-reverse lg:flex-row items-center justify-center gap-10"
+          >
             <div className="flex flex-col items-center justify-center lg:w-1/2">
               <h1 className="text-4xl font-semibold m-5 text-center">
                 {item.fields.name}
@@ -44,9 +47,11 @@ export default async function Home() {
             <article className="bg-foreground rounded-lg border border-border flex flex-col justify-center items-center gap-4 h-full p-5 text-center">
               {education.items.map((item: any) => (
                 <div key={item.sys.id}>
-                <h3 className="font-semibold underline">{item.fields.title}</h3>
-                {documentToReactComponents(item.fields.description)}
-              </div>
+                  <h3 className="font-semibold underline">
+                    {item.fields.title}
+                  </h3>
+                  {documentToReactComponents(item.fields.description)}
+                </div>
               ))}
             </article>
           </div>
@@ -57,15 +62,20 @@ export default async function Home() {
             <article className="bg-foreground rounded-lg border border-border flex flex-col justify-evenly items-center gap-4 h-full p-5 text-center">
               {experience.items.map((item: any) => (
                 <div key={item.sys.id}>
-                <h3 className="font-semibold underline">{item.fields.title}</h3>
-                {documentToReactComponents(item.fields.description)}
-              </div>
+                  <h3 className="font-semibold underline">
+                    {item.fields.title}
+                  </h3>
+                  {documentToReactComponents(item.fields.description)}
+                </div>
               ))}
             </article>
           </div>
         </section>
         {response.items.map((item: any) => (
-          <section key={item.sys.id} className="flex flex-col justify-center items-center">
+          <section
+            key={item.sys.id}
+            className="flex flex-col justify-center items-center"
+          >
             <h2 className="text-3xl font-bold m-5 underline">Skills</h2>
             <ul className="p-10 flex flex-wrap gap-10 justify-center items-center bg-foreground rounded-lg border border-border shadow-lg">
               {item.fields.skills.map((skill: string, index: number) => (
