@@ -3,25 +3,25 @@ import React from "react";
 const Header: React.FC = () => {
   return (
     <header className="p-4 w-full flex justify-between items-center bg-[#436850] shadow-lg">
-      <Link href="/" className="text-3xl font-semibold text-foreground h-11">
+      <Link href="/" className="text-3xl font-semibold text-foreground ">
         TB
       </Link>
-      <nav className="flex justify-evenly items-center gap-10">
+      <nav className="flex justify-evenly items-center gap-5">
         <Link
           href="/projects"
-          className="no-underline text-foreground font-semibold text-xl hover:underline h-11"
+          className="no-underline text-foreground font-semibold text-xl hover:underline "
         >
           Projects
         </Link>
         <Link
           href="/about"
-          className="no-underline text-foreground font-semibold text-xl hover:underline h-11"
+          className="no-underline text-foreground font-semibold text-xl hover:underline "
         >
           About me
         </Link>
         <Link
           href="/contact"
-          className="no-underline text-foreground font-semibold text-xl hover:underline h-11"
+          className="no-underline text-foreground font-semibold text-xl hover:underline "
         >
           Contact
         </Link>
