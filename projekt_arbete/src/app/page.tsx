@@ -20,8 +20,7 @@ export default async function Home() {
 
   return (
     <>
-      <Header />
-      <main className="flex flex-col items-center justify-evenly w-4/5 my-5">
+      <main className="flex flex-col items-center justify-center w-4/5 my-5 min-h-screen">
         {response.items.map((item) => (
           <section
             className="flex flex-col-reverse lg:flex-row items-center justify-center gap-10"
@@ -44,22 +43,22 @@ export default async function Home() {
           </section>
         ))}
 
-        <section className="flex flex-wrap  justify-evenly gap-10 mt-10 w-full">
+        <section className="flex flex-wrap  justify-evenly gap-10 mt-10 ">
           <Link
             href="/projects"
-            className="w-[350px] h-[270px] rounded-lg border-border border-[1px] no-underline text-black flex justify-center items-center active:bg-[#436850] active:text-white hover:underline text-xl font-bold bg-foreground shadow-lg"
+            className="w-[300px] h-[270px] rounded-lg border-border border-[1px] no-underline text-black flex justify-center items-center active:bg-[#436850] active:text-white hover:underline text-xl font-bold bg-foreground shadow-lg"
           >
             <span>Projects</span>
           </Link>
           <Link
             href="/about"
-            className="w-[350px] h-[270px] rounded-lg border-border border-[1px] no-underline text-black flex justify-center items-center active:bg-[#436850] hover:underline text-xl font-bold active:text-white bg-foreground shadow-lg"
+            className="w-[300px] h-[270px] rounded-lg border-border border-[1px] no-underline text-black flex justify-center items-center active:bg-[#436850] hover:underline text-xl font-bold active:text-white bg-foreground shadow-lg"
           >
             <span>About me</span>
           </Link>
           <Link
             href="/contact"
-            className="w-[350px] h-[270px] rounded-lg border-border border-[1px] no-underline text-black flex justify-center items-center active:bg-[#436850] active:text-white hover:underline text-xl font-bold bg-foreground shadow-lg"
+            className="w-[300px] h-[270px] rounded-lg border-border border-[1px] no-underline text-black flex justify-center items-center active:bg-[#436850] active:text-white hover:underline text-xl font-bold bg-foreground shadow-lg"
           >
             <span>Contact</span>
           </Link>
