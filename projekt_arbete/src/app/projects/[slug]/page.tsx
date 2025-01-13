@@ -6,11 +6,8 @@ import { Document } from "@contentful/rich-text-types";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 
-interface ProjectParams {
-  slug: string;
-}
-
-export default async function Project({ params }: { params: ProjectParams }) {
+// @ts-ignore
+export default async function Project({ params }) {
   const { slug } = params;
 
   if (
@@ -45,8 +42,8 @@ export default async function Project({ params }: { params: ProjectParams }) {
     </>
   );
 }
-
-function ProjectDetails({ project }: { project: any }) {
+// @ts-ignore
+function ProjectDetails({ project }) {
   return (
     <article className="flex flex-col justify-center items-center w-full gap-5 bg-foreground p-10 rounded-xl border border-black lg:max-w-[75%] shadow-lg">
       <ImageSlider images={project.fields.featureImages} />
