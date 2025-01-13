@@ -6,8 +6,12 @@ import { Document } from "@contentful/rich-text-types";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 
-export default async function Project({ params }: { params: { slug: string } }) {
-  const { slug } = await params;
+interface ProjectParams {
+  slug: string;
+}
+
+export default async function Project({ params }: { params: ProjectParams }) {
+  const { slug } = params;
 
   if (
     !process.env.CONTENTFUL_SPACE_ID ||
