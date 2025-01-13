@@ -30,21 +30,21 @@ const CategoryNav: FC<CategoryNavProps> = ({ uniqueCategories, projects }) => {
 
   return (
     <>
-      <div className=" flex flex-col-reverse md:flex-row gap-5">
-        <div className="flex flex-wrap justify-evenly items-center gap-5">
+      <div className=" flex flex-col-reverse justify-between items-stretch w-full md:flex-row gap-5">
+        <div className="flex flex-wrap justify-evenly items-center gap-5 w-full">
           {filteredProjects.map((item: any) => (
           <ProjectCard key={item.sys.id} project={item} />
         ))}
         </div>
 
-        <div className="flex flex-row md:flex-col justify-start items-start flex-wrap bg-foreground border-[1px] border-border p-3 shadow-xl h-fit">
-          <h2 className="text-2xl font-semibold underline w-full">Categories</h2>
+        <div className="flex flex-row md:flex-col justify-start items-start flex-wrap   h-fit">
+          <h2 className="text-2xl font-semibold underline w-full text-center md:text-left">Categories</h2>
           {uniqueCategories.map((category) => (
             <button
               key={category}
               aria-label={`Filter by ${category}`}
               className={`${
-                selectedCategory === category ? "underline font-semibold" : ""
+                selectedCategory === category ? "underline font-bold" : "font-semibold"
               } p-2`}
               onClick={() => handleCategoryClick(category)}
             >

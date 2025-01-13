@@ -27,7 +27,7 @@ export default async function Projects() {
   return (
     <>
       <Header />
-      <main className="flex items-center justify-evenly gap-10 flex-wrap m-10">
+      <main className="flex items-center justify-evenly gap-10 flex-wrap p-10 w-full">
         <ProjectDetails
           projects={response.items}
           uniqueCategories={uniqueCategories}
