@@ -17,18 +17,19 @@ export default async function Contact() {
   return (
     <>
       <Header />
-      <main className="flex flex-col lg:flex-row justify-center items-center gap-10 md:gap-20 w-full p-20">
-        <section className="flex flex-col justify-center items-center gap-5 w-2/3">
+
+      <main className="flex flex-col lg:flex-row items-center justify-center w-fit p-10 min-h-screen gap-10 md:gap-20">
+        <section className="flex flex-col justify-center items-center gap-5 md:gap-10 min-w-80">
           {aboutInfo.items.map((item: any) => (
             <img
               key={item.sys.id}
               src={item.fields.profile?.fields.file.url}
               alt="Profile Picture"
-              className="w-80 h-80 rounded-full m-5 border-2 border-border shadow-lg"
+              className="w-64 h-64 sm:w-80 sm:h-80 rounded-full border-2 border-border shadow-lg"
             />
           ))}
 
-          <div className="bg-foreground rounded-lg w-full flex flex-col items-center justify-center p-4 border-2 border-border shadow-lg">
+          <div className="bg-foreground rounded-lg flex flex-col items-center justify-center p-4 w-full border-2 border-border shadow-lg">
             <h2 className="text-xl font-semibold m-5 underline">
               Find me online!
             </h2>
@@ -44,11 +45,11 @@ export default async function Contact() {
         <form
           action="/submit"
           method="post"
-          className="flex flex-col justify-center items-center gap-5 mb-5 md:mb-0 bg-foreground p-4 border-2 border-black rounded-lg w-2/3 shadow-lg"
+          className="bg-foreground rounded-lg flex flex-col items-center justify-center p-4 gap-5 border-2 border-border shadow-lg w-full"
         >
           <h3 className="font-semibold text-2xl">Contact me</h3>
-          <div className="flex flex-col md:flex-row justify-center items-center gap-5">
-            <div className="flex flex-col  justify-center items-center gap-5">
+          <div className="flex flex-col lg:flex-row justify-center items-center gap-5 h-full">
+            <div className="flex flex-col justify-center items-center gap-5">
               <input
                 type="text"
                 id="name"
@@ -79,7 +80,7 @@ export default async function Contact() {
               name="message"
               placeholder="Message"
               required
-              className="bg-[#fff] border border-border rounded-md p-2 h-full"
+              className="bg-[#fff] border border-border rounded-md p-2 h-[100%]"
             ></textarea>
           </div>
 

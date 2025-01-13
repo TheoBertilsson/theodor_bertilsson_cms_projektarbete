@@ -30,7 +30,7 @@ const CategoryNav: FC<CategoryNavProps> = ({ uniqueCategories, projects }) => {
 
   return (
     <>
-      <nav className="flex justify-center gap-5 w-full flex-wrap">
+      <nav className="flex justify-center gap-2 w-full flex-wrap">
         {uniqueCategories.map((category) => (
           <button
             key={category}

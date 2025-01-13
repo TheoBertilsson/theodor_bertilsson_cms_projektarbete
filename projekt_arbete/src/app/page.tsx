@@ -20,17 +20,17 @@ export default async function Home() {
 
   return (
     <>
-      <main className="flex flex-col items-center justify-center w-4/5 my-5 min-h-screen">
+      <main className="flex flex-col items-center justify-center w-4/5 my-5 min-h-screen gap-10">
         {response.items.map((item) => (
           <section
-            className="flex flex-col-reverse lg:flex-row items-center justify-center gap-10"
+            className="flex flex-col-reverse lg:flex-row items-center lg:items-start justify-center gap-10"
             key={item.sys.id}
           >
-            <div className="flex flex-col items-center justify-center lg:w-1/2">
-              <h1 className="text-4xl font-semibold m-5 text-center">
+            <div className="flex flex-col items-center justify-center lg:w-1/2 gap-5">
+              <h1 className="text-4xl font-semibold text-center">
                 {item.fields.name as string}
               </h1>
-              <div className="text-center m-5 w-full bg-foreground border-[1px] border-border p-5 rounded-lg shadow-lg">
+              <div className="text-center w-full bg-foreground border-[1px] border-border p-5 rounded-lg shadow-lg">
                 {documentToReactComponents(item.fields.aboutMeInfo as any)}
               </div>
             </div>
@@ -38,7 +38,7 @@ export default async function Home() {
             // @ts-ignore
               src={item.fields.profile?.fields?.file?.url ?? ""}
               alt="Profile Picture"
-              className="w-56 h-56 sm:w-80 sm:h-80 rounded-full m-5 border-[1px] shadow-lg border-border"
+              className="w-64 h-64 sm:w-80 sm:h-80 rounded-full border-[1px] shadow-lg border-border"
             />
           </section>
         ))}

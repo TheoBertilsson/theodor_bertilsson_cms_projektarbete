@@ -19,24 +19,25 @@ export default async function Home() {
   return (
     <>
       <Header />
-      <main className="flex flex-col items-center justify-evenly w-full h-full p-10">
-        {response.items.map((item: any) => (
+      <main className="flex flex-col items-center justify-center w-4/5 my-5 min-h-screen gap-10">
+        {response.items.map((item) => (
           <section
+            className="flex flex-col-reverse lg:flex-row items-center lg:items-start justify-center gap-10"
             key={item.sys.id}
-            className="flex flex-col-reverse lg:flex-row items-center justify-center gap-10"
           >
-            <div className="flex flex-col items-center justify-center lg:w-1/2">
-              <h1 className="text-4xl font-semibold m-5 text-center">
-                {item.fields.name}
+            <div className="flex flex-col items-center justify-center lg:w-1/2 gap-5">
+              <h1 className="text-4xl font-semibold text-center">
+                {item.fields.name as string}
               </h1>
-              <div className="text-center my-5 w-full bg-foreground border-[1px] border-border p-5 rounded-lg shadow-lg">
-                {documentToReactComponents(item.fields.aboutMeInfo)}
+              <div className="text-center w-full bg-foreground border-[1px] border-border p-5 rounded-lg shadow-lg">
+                {documentToReactComponents(item.fields.aboutMeInfo as any)}
               </div>
             </div>
             <img
-              src={item.fields.profile.fields.file.url}
+            // @ts-ignore
+              src={item.fields.profile?.fields?.file?.url ?? ""}
               alt="Profile Picture"
-              className="w-56 h-56 sm:w-80 sm:h-80 rounded-full m-5 border-[1px] shadow-lg border-border"
+              className="w-64 h-64 sm:w-80 sm:h-80 rounded-full border-[1px] shadow-lg border-border"
             />
           </section>
         ))}
@@ -77,7 +78,7 @@ export default async function Home() {
             className="flex flex-col justify-center items-center"
           >
             <h2 className="text-3xl font-bold m-5 underline">Skills</h2>
-            <ul className="p-10 flex flex-wrap gap-10 justify-center items-center bg-foreground rounded-lg border border-border shadow-lg">
+            <ul className="p-10 flex flex-wrap gap-5 justify-center items-center bg-foreground rounded-lg border border-border shadow-lg">
               {item.fields.skills.map((skill: string, index: number) => (
                 <li key={index}>{skill} </li>
               ))}
