@@ -23,7 +23,7 @@ export default function ImageSlider({ images }: { images: any[] }) {
           src={images[currentImageIndex]?.fields.file.url}
           alt={images[currentImageIndex]?.fields.title}
           aria-label={images[currentImageIndex]?.fields.title}
-          className="rounded-lg max-h-[500px] shadow-lg"
+          className="rounded-lg max-h-[500px] shadow-xl"
         />
       )}
 

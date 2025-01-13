@@ -25,11 +25,11 @@ export default async function Contact() {
               key={item.sys.id}
               src={item.fields.profile?.fields.file.url}
               alt="Profile Picture"
-              className="w-64 h-64 sm:w-80 sm:h-80 rounded-full border-2 border-border shadow-lg"
+              className="w-64 h-64 sm:w-80 sm:h-80 rounded-full border-2 border-border shadow-xl"
             />
           ))}
 
-          <div className="bg-foreground rounded-lg flex flex-col items-center justify-center p-4 w-full border-2 border-border shadow-lg">
+          <div className="bg-foreground rounded-lg flex flex-col items-center justify-center p-4 w-full border-2 border-border shadow-xl">
             <h2 className="text-xl font-semibold m-5 underline">
               Find me online!
             </h2>
@@ -45,7 +45,7 @@ export default async function Contact() {
         <form
           action="/submit"
           method="post"
-          className="bg-foreground rounded-lg flex flex-col items-center justify-center p-4 gap-5 border-2 border-border shadow-lg w-full"
+          className="bg-foreground rounded-lg flex flex-col items-center justify-center p-4 gap-5 border-2 border-border shadow-xl w-full"
         >
           <h3 className="font-semibold text-2xl">Contact me</h3>
           <div className="flex flex-col lg:flex-row justify-center items-center gap-5 h-full">

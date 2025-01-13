@@ -2,7 +2,7 @@ import Link from "next/link";
 import React from "react";
 const Header: React.FC = () => {
   return (
-    <header className="p-4 w-full flex justify-between items-center bg-[#436850] shadow-lg">
+    <header className="p-4 w-full flex justify-between items-center bg-[#436850] shadow-xl">
       <Link href="/" className="text-3xl font-semibold text-foreground ">
         TB
       </Link>

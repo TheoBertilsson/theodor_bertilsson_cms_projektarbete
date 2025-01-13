@@ -29,22 +29,22 @@ export default async function Home() {
               <h1 className="text-4xl font-semibold text-center">
                 {item.fields.name as string}
               </h1>
-              <div className="text-center w-full bg-foreground border-[1px] border-border p-5 rounded-lg shadow-lg">
+              <div className="text-center w-full bg-foreground border-[1px] border-border p-5 rounded-lg shadow-xl">
                 {documentToReactComponents(item.fields.aboutMeInfo as any)}
               </div>
             </div>
             <img
-            // @ts-ignore
+              // @ts-ignore
               src={item.fields.profile?.fields?.file?.url ?? ""}
               alt="Profile Picture"
-              className="w-64 h-64 sm:w-80 sm:h-80 rounded-full border-[1px] shadow-lg border-border"
+              className="w-64 h-64 sm:w-80 sm:h-80 rounded-full border-[1px] shadow-xl border-border"
             />
           </section>
         ))}
 
         <section className="flex flex-col justify-center items-center">
           <h2 className="text-3xl font-bold m-5 underline">Education</h2>
-          <div className="flex justify-evenly items-center gap-10 flex-wrap shadow-lg">
+          <div className="flex justify-evenly items-center gap-10 flex-wrap shadow-xl">
             <article className="bg-foreground rounded-lg border border-border flex flex-col justify-center items-center gap-4 h-full p-5 text-center">
               {education.items.map((item: any) => (
                 <div key={item.sys.id}>
@@ -59,7 +59,7 @@ export default async function Home() {
         </section>
         <section className="flex flex-col justify-center items-center">
           <h2 className="text-3xl font-bold m-5 underline ">Experience</h2>
-          <div className="flex justify-evenly items-center gap-10 flex-wrap shadow-lg">
+          <div className="flex justify-evenly items-center gap-10 flex-wrap shadow-xl">
             <article className="bg-foreground rounded-lg border border-border flex flex-col justify-evenly items-center gap-4 h-full p-5 text-center">
               {experience.items.map((item: any) => (
                 <div key={item.sys.id}>
@@ -78,7 +78,7 @@ export default async function Home() {
             className="flex flex-col justify-center items-center"
           >
             <h2 className="text-3xl font-bold m-5 underline">Skills</h2>
-            <ul className="p-10 flex flex-wrap gap-5 justify-center items-center bg-foreground rounded-lg border border-border shadow-lg">
+            <ul className="p-10 flex flex-wrap gap-5 justify-center items-center bg-foreground rounded-lg border border-border shadow-xl">
               {item.fields.skills.map((skill: string, index: number) => (
                 <li key={index}>{skill} </li>
               ))}

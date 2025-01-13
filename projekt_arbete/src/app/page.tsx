@@ -30,15 +30,15 @@ export default async function Home() {
               <h1 className="text-4xl font-semibold text-center">
                 {item.fields.name as string}
               </h1>
-              <div className="text-center w-full bg-foreground border-[1px] border-border p-5 rounded-lg shadow-lg">
+              <div className="text-center w-full bg-foreground border-[1px] border-border p-5 rounded-lg shadow-xl">
                 {documentToReactComponents(item.fields.aboutMeInfo as any)}
               </div>
             </div>
             <img
-            // @ts-ignore
+              // @ts-ignore
               src={item.fields.profile?.fields?.file?.url ?? ""}
               alt="Profile Picture"
-              className="w-64 h-64 sm:w-80 sm:h-80 rounded-full border-[1px] shadow-lg border-border"
+              className="w-64 h-64 sm:w-80 sm:h-80 rounded-full border-[1px] shadow-xl border-border"
             />
           </section>
         ))}
@@ -46,19 +46,19 @@ export default async function Home() {
         <section className="flex flex-wrap  justify-evenly gap-10 mt-10 ">
           <Link
             href="/projects"
-            className="w-[300px] h-[270px] rounded-lg border-border border-[1px] no-underline text-black flex justify-center items-center active:bg-[#436850] active:text-white hover:underline text-xl font-bold bg-foreground shadow-lg"
+            className="w-[300px] h-[270px] rounded-lg border-border border-[1px] no-underline text-black flex justify-center items-center active:bg-[#436850] active:text-white hover:underline text-xl font-bold bg-foreground shadow-xl"
           >
             <span>Projects</span>
           </Link>
           <Link
             href="/about"
-            className="w-[300px] h-[270px] rounded-lg border-border border-[1px] no-underline text-black flex justify-center items-center active:bg-[#436850] hover:underline text-xl font-bold active:text-white bg-foreground shadow-lg"
+            className="w-[300px] h-[270px] rounded-lg border-border border-[1px] no-underline text-black flex justify-center items-center active:bg-[#436850] hover:underline text-xl font-bold active:text-white bg-foreground shadow-xl"
           >
             <span>About me</span>
           </Link>
           <Link
             href="/contact"
-            className="w-[300px] h-[270px] rounded-lg border-border border-[1px] no-underline text-black flex justify-center items-center active:bg-[#436850] active:text-white hover:underline text-xl font-bold bg-foreground shadow-lg"
+            className="w-[300px] h-[270px] rounded-lg border-border border-[1px] no-underline text-black flex justify-center items-center active:bg-[#436850] active:text-white hover:underline text-xl font-bold bg-foreground shadow-xl"
           >
             <span>Contact</span>
           </Link>
