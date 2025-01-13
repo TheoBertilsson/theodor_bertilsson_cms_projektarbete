@@ -2,7 +2,6 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { createClient } from "contentful";
 import Header from "./components/Header";
 import Link from "next/link";
-import { AboutMeFields } from "./types";
 
 export default async function Home() {
   if (

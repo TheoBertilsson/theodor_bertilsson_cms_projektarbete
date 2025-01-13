@@ -2,6 +2,7 @@
 import { createClient } from "contentful";
 import Header from "../components/Header";
 import CategoryNav from "../components/CategoryNav";
+import { Metadata } from "next";
 
 export default async function Projects() {
   if (
@@ -49,14 +50,11 @@ function ProjectDetails({
   );
 }
 
-export const generateMetadata = async () => {
-  return {
+export const metadata: Metadata = {
+  title: "Projects | Theos Portfolio",
+  description: "Explore my latest web development projects, including React, Svelte, Next.js, and full-stack applications.",
+  openGraph: {
     title: "Projects | Theos Portfolio",
-    description:
-      "Explore my latest web development projects, including React, Svelte, Next.js, and full-stack applications.",
-    openGraph: {
-      title: "Projects | Your Portfolio",
-      description: "Explore my latest web development projects",
-    },
-  };
+    description: "Explore my latest web development projects",
+  },
 };
