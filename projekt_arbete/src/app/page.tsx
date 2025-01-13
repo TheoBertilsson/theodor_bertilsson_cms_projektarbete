@@ -30,7 +30,7 @@ export default async function Home() {
               <h1 className="text-4xl font-semibold text-center">
                 {item.fields.name as string}
               </h1>
-              <div className="text-center w-full bg-foreground border-[1px] border-border p-5 rounded-lg shadow-xl">
+              <div className="text-center w-full bg-foreground border-[1px] border-border p-5  shadow-xl">
                 {documentToReactComponents(item.fields.aboutMeInfo as any)}
               </div>
             </div>
@@ -43,22 +43,22 @@ export default async function Home() {
           </section>
         ))}
 
-        <section className="flex flex-wrap  justify-evenly gap-10 mt-10 ">
+        <section className="flex flex-wrap  justify-evenly gap-5 mt-10 ">
           <Link
             href="/projects"
-            className="w-[300px] h-[270px] rounded-lg border-border border-[1px] no-underline text-black flex justify-center items-center active:bg-[#436850] active:text-white hover:underline text-xl font-bold bg-foreground shadow-xl"
+            className="w-[300px] py-10  border-border border-[1px] no-underline text-black flex justify-center items-center active:bg-[#436850] active:text-white hover:underline text-xl font-bold bg-foreground shadow-xl"
           >
             <span>Projects</span>
           </Link>
           <Link
             href="/about"
-            className="w-[300px] h-[270px] rounded-lg border-border border-[1px] no-underline text-black flex justify-center items-center active:bg-[#436850] hover:underline text-xl font-bold active:text-white bg-foreground shadow-xl"
+            className="w-[300px] py-10  border-border border-[1px] no-underline text-black flex justify-center items-center active:bg-[#436850] hover:underline text-xl font-bold active:text-white bg-foreground shadow-xl"
           >
             <span>About me</span>
           </Link>
           <Link
             href="/contact"
-            className="w-[300px] h-[270px] rounded-lg border-border border-[1px] no-underline text-black flex justify-center items-center active:bg-[#436850] active:text-white hover:underline text-xl font-bold bg-foreground shadow-xl"
+            className="w-[300px] py-10  border-border border-[1px] no-underline text-black flex justify-center items-center active:bg-[#436850] active:text-white hover:underline text-xl font-bold bg-foreground shadow-xl"
           >
             <span>Contact</span>
           </Link>

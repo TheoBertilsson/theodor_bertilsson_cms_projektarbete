@@ -7,13 +7,13 @@ import Link from "next/link";
 export default function ProjectCard({ project }: { project: any }) {
   return (
     <Link
-      className="w-[350px] h-[600px] pb-10 bg-[#FBFADA] rounded-lg shadow-2xl flex flex-col items-center justify-start gap-5 border-2  pt-9 border-border"
+      className="w-[350px] h-[600px] pb-10 bg-[#FBFADA]  shadow-2xl flex flex-col items-center justify-start gap-5 border-2  pt-9 border-border"
       href={`/projects/${project.fields.slug}`}
     >
       <img
         src={project.fields.thumbnailImage.fields.file.url}
         alt={`${project.fields.title} project preview`}
-        className="w-[280px] h-[280px] rounded-lg border border-border"
+        className="w-[280px] h-[280px]  border border-border"
         loading="lazy"
         aria-label={`${project.fields.title} project preview`}
       />

@@ -22,14 +22,14 @@ export default async function Home() {
       <main className="flex flex-col items-center justify-center w-4/5 my-5 min-h-screen gap-10">
         {response.items.map((item) => (
           <section
-            className="flex flex-col-reverse lg:flex-row items-center lg:items-start justify-center gap-10"
+            className="flex flex-col-reverse lg:flex-row items-center lg:items-start justify-center gap-10 my-10"
             key={item.sys.id}
           >
             <div className="flex flex-col items-center justify-center lg:w-1/2 gap-5">
               <h1 className="text-4xl font-semibold text-center">
                 {item.fields.name as string}
               </h1>
-              <div className="text-center w-full bg-foreground border-[1px] border-border p-5 rounded-lg shadow-xl">
+              <div className="text-center w-full bg-foreground border-[1px] border-border p-5  shadow-xl">
                 {documentToReactComponents(item.fields.aboutMeInfo as any)}
               </div>
             </div>
@@ -45,7 +45,7 @@ export default async function Home() {
         <section className="flex flex-col justify-center items-center">
           <h2 className="text-3xl font-bold m-5 underline">Education</h2>
           <div className="flex justify-evenly items-center gap-10 flex-wrap shadow-xl">
-            <article className="bg-foreground rounded-lg border border-border flex flex-col justify-center items-center gap-4 h-full p-5 text-center">
+            <article className="bg-foreground  border border-border flex flex-col justify-center items-center gap-4 h-full p-5 text-center">
               {education.items.map((item: any) => (
                 <div key={item.sys.id}>
                   <h3 className="font-semibold underline">
@@ -60,7 +60,7 @@ export default async function Home() {
         <section className="flex flex-col justify-center items-center">
           <h2 className="text-3xl font-bold m-5 underline ">Experience</h2>
           <div className="flex justify-evenly items-center gap-10 flex-wrap shadow-xl">
-            <article className="bg-foreground rounded-lg border border-border flex flex-col justify-evenly items-center gap-4 h-full p-5 text-center">
+            <article className="bg-foreground  border border-border flex flex-col justify-evenly items-center gap-4 h-full p-5 text-center">
               {experience.items.map((item: any) => (
                 <div key={item.sys.id}>
                   <h3 className="font-semibold underline">
@@ -78,7 +78,7 @@ export default async function Home() {
             className="flex flex-col justify-center items-center"
           >
             <h2 className="text-3xl font-bold m-5 underline">Skills</h2>
-            <ul className="p-10 flex flex-wrap gap-5 justify-center items-center bg-foreground rounded-lg border border-border shadow-xl">
+            <ul className="p-10 flex flex-wrap gap-5 justify-center items-center bg-foreground  border border-border shadow-xl">
               {item.fields.skills.map((skill: string, index: number) => (
                 <li key={index}>{skill} </li>
               ))}
