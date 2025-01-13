@@ -36,6 +36,7 @@ export default async function Home() {
               </div>
             </div>
             <img
+            // @ts-ignore
               src={item.fields.profile?.fields?.file?.url ?? ""}
               alt="Profile Picture"
               className="w-56 h-56 sm:w-80 sm:h-80 rounded-full m-5 border-[1px] shadow-lg border-border"
